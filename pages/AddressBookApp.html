@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0.600;1,500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/my_home.css">
+    <script type="text/javascript" src="../js/site_properties.js"></script>
+    <script type="text/javascript" src="../js/my_home.js"> </script>
+    <script type="text/javascript" src="../js/utility.js"></script>
+    <script type="text/javascript" src="../js/AjaxService.js"></script>
+    <title>AddressBook</title>
+</head>
+
+<body>
+    <header class="header-content header">
+        <div class="logo-content" onclick="location.href='./EmployeePayroll.html'">
+            <img src="../assets/images/logo.png" alt="Logo">
+            <div>
+                <span class="emp-text">PERSON</span><br>
+                <span class="emp-text emp-payroll">DETAILS</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="header-content sub-main-content">
+            <div class="emp-detail-text">
+                PERSON Details <div class="emp-count">0</div>
+            </div>
+            <div>
+                <select class="cityclass" onchange="handleSelectChange(event)" id="city_form" name="city_form">
+                    <option value="0">Select City</option>
+                    <option value="Rohtak">Rohtak</option>
+                    <option value="Jalandhar">Jalandhar</option>
+                    <option value="Nashik">Nashik</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Banglore">Banglore</option>
+                    <option value="Jaipur">Jaipur</option>
+                    <option value="Udhampur">Udhampur</option>
+                </select>
+            </div>
+            <div>
+                <select id="state" class="cityclass" onchange="handleStateChange(event)" name="state" required>
+                    <option value="">Select State</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="West Bengal">West Bengal</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Jammu Kashmir">Jammu Kashmir</option>
+                </select>
+            </div>
+            <div onclick="location.href='./AddressBook.html'" class="add-button">
+                <div class="plus-icon">
+                    <img src="../assets/icons/add-24px.svg" alt="Add User Logo">
+                </div>
+                <div>Add PERSON</div>
+            </div>
+
+        </div>
+        <div class="table-main">
+            <table class="table" id="display">
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

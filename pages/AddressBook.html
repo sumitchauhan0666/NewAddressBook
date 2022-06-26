@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/AddressBook.css">
+    <script type="text/javascript" src="../js/FormValidation.js"></script>
+    <!-- <script type="text/javascript" src="../js/EmployeePayroll.js"></script> -->
+    <script type="text/javascript" src="../js/site_properties.js"></script>
+    <script type="text/javascript" src="../js/utility.js"></script>
+    <script type="text/javascript" src="../js/AjaxService.js"></script>
+    <title>AddressBookApp</title>
+</head>
+
+<body>
+    <!-- UC1 Create the page header for home page-->
+    <header class="header-content header">
+        <div class="logo-content">
+            <a href="./AddressBook.html"></a>
+            <img src="../assets\images\logo.png" alt="logo">
+            <div>
+                <span class="book-text">ADDRESS</span><br>
+                <span class="book-text add-book">BOOK</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="form-content">
+        <form class="form" action="#" onsubmit="save(event); false" onreset="reset()">
+            <div class="form-head">
+                <span class="form-head-text">PERSON ADDRESS FORM</span>
+                <span class="cross-icon">
+                    <ion-icon class="close-circle" name="close-circle" onclick="cancel();"></ion-icon>
+                </span>
+            </div>
+            <div class="body">
+                <label class="label text" for="name">Full Name</label><br>&nbsp;
+                <input class="input" type="text" id="name" name="name" placeholder="Enter your name here" required>
+                <error-output class="text-error"></error-output>
+
+                <label class="label-text-phone" for="phone">Phone Number</label><br>&nbsp;
+                <input class="input" type="tel" id="phone" name="phone" placeholder="Enter your phone number here"
+                    required>
+                <error-output class="phone-error"></error-output>
+
+                <label class="label text" for="address">Address</label><br>&nbsp;
+                <textarea id="address" class="input" name="address" placeholder="Enter your address here"
+                    style="height: 100px; "></textarea>
+                <error-output class="address-error"></error-output>
+
+                <div class="row-content">&nbsp;
+                    <div class="label-city">
+                        <label class="city" for="city">City</label><br>&nbsp;
+                        <select id="city" name="city">
+                            <option value="0">Select City</option>
+                            <option value="Rohtak">Rohtak</option>
+                            <option value="Jalandhar">Jalandhar</option>
+                            <option value="Nashik">Nashik</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Banglore">Banglore</option>
+                            <option value="Jaipur">Jaipur</option>
+                            <option value="Udhampur">Udhampur</option>
+                        </select>
+                    </div>
+                    <div class="label-state">
+                        <label class="state" for="state">State</label><br>&nbsp;
+                        <select id="state" name="state">
+                            <option value="">Select State</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="West Bengal">West Bengal</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Jammu Kashmir">Jammu Kashmir</option>
+                        </select>
+                    </div>
+                    <div class="label-zip">
+                        <label class="zip" for="zipcode">Zipcode</label></br>&nbsp;
+                        <input class="input" type="zipcode" id="zipcode" name="zipcode"></input>
+                    </div>
+                </div>
+
+                <!-- UC5 Add submit and reset button at the end of the form-->
+                <div class="add-reset">
+                    <a href="./Home_Page.html"></a>
+                    <button type="submit" class="addButton" id="addButton">Submit</button>
+                    <button type="reset" class="resetButton" id="resetButton">Reset</button>
+                </div>
+            </div>
+
+
+        </form>
+        <script>
+
+        </script>
+
+    </div>
+</body>
+
+</html>
